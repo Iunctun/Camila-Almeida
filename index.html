@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Camila Almeida — Assessora de Visto Americano</title>
+<meta name="description" content="Assessoria personalizada para quem deseja solicitar o visto americano com mais segurança, organização e tranquilidade em cada etapa do processo." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300,0..1,0" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          burgundy: { DEFAULT: '#8E2F32', dark: '#641F24' },
+          cream: '#F5EFE6',
+          offwhite: '#FCFAF6',
+          navy: '#182536',
+          gold: '#B79A6B',
+          hairline: '#E6D9CA'
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['Montserrat', 'sans-serif']
+        },
+        boxShadow: {
+          whisper: '0px 10px 30px rgba(24, 37, 54, 0.06)'
+        },
+        maxWidth: {
+          container: '1180px'
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22Georgia,serif%22 fill=%22%238E2F32%22>C</text></svg>" />
+</head>
+
+<body class="bg-cream text-navy font-sans antialiased selection:bg-burgundy selection:text-offwhite">
+
+<!-- ============================================================
+     SPRITE — elementos SVG reutilizados (estrelas / linhas)
+     ============================================================ -->
+<svg width="0" height="0" class="hidden" aria-hidden="true">
+  <symbol id="icon-star4" viewBox="0 0 24 24">
+    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+  </symbol>
+</svg>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="flex items-center justify-between py-4">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group" aria-label="Camila Almeida — Início">
+        <span class="font-serif text-3xl leading-none text-burgundy">CA</span>
+        <span class="hidden sm:flex flex-col leading-tight border-l border-hairline pl-3">
+          <span class="font-serif text-base text-navy group-hover:text-burgundy transition-colors">Camila Almeida</span>
+          <span class="font-sans text-[10px] tracking-[0.18em] uppercase text-burgundy/80">Assessora de Visto Americano</span>
+        </span>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav aria-label="Navegação principal" class="hidden xl:flex items-center gap-5">
+        <a href="#inicio" class="nav-link active whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Início</a>
+        <a href="#sobre" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Sobre</a>
+        <a href="#servicos" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Serviços</a>
+        <a href="#como-funciona" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Como funciona</a>
+        <a href="#depoimentos" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Depoimentos</a>
+        <a href="#faq" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Dúvidas</a>
+        <a href="#contato" class="nav-link whitespace-nowrap font-sans text-[11px] tracking-[0.06em] uppercase text-navy/80 hover:text-burgundy transition-colors">Contato</a>
+      </nav>
+
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20de%20visto%20americano."
+         target="_blank" rel="noopener"
+         class="hidden xl:inline-flex btn-primary items-center justify-center whitespace-nowrap px-5 py-2.5 rounded-sm font-sans text-[11px] tracking-[0.06em] uppercase">
+        Falar com a Camila
+      </a>
+
+      <!-- Menu mobile toggle -->
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"
+              class="xl:hidden text-burgundy p-2 -mr-2">
+        <span id="icon-menu" class="material-symbols-outlined text-3xl">menu</span>
+        <span id="icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Nav mobile -->
+  <nav id="mobile-nav" aria-label="Navegação mobile" class="xl:hidden absolute top-full inset-x-0 bg-offwhite border-b border-hairline shadow-whisper">
+    <div class="flex flex-col px-6 py-6 gap-1">
+      <a href="#inicio" class="font-serif text-lg text-navy py-3 border-b border-hairline">Início</a>
+      <a href="#sobre" class="font-serif text-lg text-navy py-3 border-b border-hairline">Sobre</a>
+      <a href="#servicos" class="font-serif text-lg text-navy py-3 border-b border-hairline">Serviços</a>
+      <a href="#como-funciona" class="font-serif text-lg text-navy py-3 border-b border-hairline">Como funciona</a>
+      <a href="#depoimentos" class="font-serif text-lg text-navy py-3 border-b border-hairline">Depoimentos</a>
+      <a href="#faq" class="font-serif text-lg text-navy py-3 border-b border-hairline">Dúvidas</a>
+      <a href="#contato" class="font-serif text-lg text-navy py-3">Contato</a>
+      <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20de%20visto%20americano."
+         target="_blank" rel="noopener"
+         class="btn-primary mt-4 inline-flex items-center justify-center px-6 py-4 rounded-sm font-sans text-xs tracking-[0.14em] uppercase">
+        Falar com a Camila
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20">
+
+  <!-- Fundo decorativo -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 flag-texture opacity-[0.10]"></div>
+    <div class="absolute top-0 right-0 w-40 h-28 flag-canton opacity-[0.10]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/90 to-cream"></div>
+    <div class="absolute inset-0 passport-texture opacity-40"></div>
+
+    <!-- Estátua da Liberdade, silhueta discreta -->
+    <svg class="absolute right-[4%] bottom-0 h-[62%] w-auto opacity-[0.05] text-navy hidden md:block" viewBox="0 0 200 420" fill="currentColor" aria-hidden="true">
+      <path d="M100 0c-6 0-11 5-11 11 0 4 2 7 5 9-8 3-14 10-14 19 0 3 1 6 2 8-10 2-18 10-18 21 0 5 2 10 5 13H60c-4 0-7 3-7 7s3 7 7 7h6l-4 30h76l-4-30h6c4 0 7-3 7-7s-3-7-7-7h-11c3-3 5-8 5-13 0-11-8-19-18-21 1-2 2-5 2-8 0-9-6-16-14-19 3-2 5-5 5-9 0-6-5-11-11-11zm-6 125-6 30h24l-6-30zm-30 40-10 60h92l-10-60zm-16 70-14 90h132l-14-90z"/>
+    </svg>
+
+    <!-- Skyline discreto -->
+    <svg class="absolute inset-x-0 bottom-0 h-24 w-full opacity-[0.06] text-navy" viewBox="0 0 1200 140" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+      <rect x="0" y="70" width="60" height="70"/>
+      <rect x="70" y="40" width="45" height="100"/>
+      <rect x="125" y="90" width="50" height="50"/>
+      <rect x="185" y="20" width="38" height="120"/>
+      <rect x="230" y="60" width="55" height="80"/>
+      <rect x="295" y="10" width="30" height="130"/>
+      <rect x="333" y="75" width="60" height="65"/>
+      <rect x="404" y="45" width="40" height="95"/>
+      <rect x="452" y="0" width="26" height="140"/>
+      <rect x="486" y="85" width="55" height="55"/>
+      <rect x="550" y="55" width="42" height="85"/>
+      <rect x="600" y="95" width="60" height="45"/>
+    </svg>
+  </div>
+
+  <div class="max-w-container mx-auto px-5 md:px-8 relative z-10 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Conteúdo -->
+      <div class="lg:col-span-7 reveal">
+        <span class="inline-flex items-center gap-2 border border-burgundy/30 text-burgundy font-sans text-[11px] tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-7 bg-offwhite/70">
+          <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-star4"/></svg>
+          Assessoria especializada
+        </span>
+
+        <h1 class="font-serif font-medium text-[2.5rem] leading-[1.12] sm:text-5xl md:text-[3.4rem] text-navy mb-6">
+          Seu sonho americano começa com a orientação certa.
+        </h1>
+
+        <p class="font-sans text-lg leading-relaxed text-navy/70 max-w-xl mb-10">
+          Assessoria personalizada para quem deseja solicitar seu <span class="text-burgundy font-semibold">VISTO</span> americano com mais segurança, organização e tranquilidade em cada etapa do processo.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-5 sm:items-center mb-12">
+          <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Quero%20solicitar%20meu%20visto%20americano%20e%20gostaria%20de%20assessoria."
+             target="_blank" rel="noopener"
+             class="btn-primary inline-flex items-center justify-center px-8 py-4 rounded-sm font-sans text-xs tracking-[0.18em] uppercase shadow-whisper text-center">
+            Quero solicitar meu visto
+          </a>
+          <a href="https://wa.me/5547999259844" target="_blank" rel="noopener"
+             class="group inline-flex items-center gap-2 text-burgundy font-sans text-sm tracking-wide">
+            <span class="border-b border-burgundy/40 group-hover:border-burgundy transition-colors pb-0.5">Falar pelo WhatsApp</span>
+            <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-x-8 gap-y-3 border-t border-hairline pt-6">
+          <div class="flex items-center gap-2 text-navy/70 font-sans text-[13px]">
+            <span class="material-symbols-outlined text-burgundy text-[18px]">check</span>Atendimento personalizado
+          </div>
+          <div class="flex items-center gap-2 text-navy/70 font-sans text-[13px]">
+            <span class="material-symbols-outlined text-burgundy text-[18px]">check</span>Orientação em todas as etapas
+          </div>
+          <div class="flex items-center gap-2 text-navy/70 font-sans text-[13px]">
+            <span class="material-symbols-outlined text-burgundy text-[18px]">check</span>Processo organizado
+          </div>
+          <div class="flex items-center gap-2 text-navy/70 font-sans text-[13px]">
+            <span class="material-symbols-outlined text-burgundy text-[18px]">check</span>Suporte próximo
+          </div>
+        </div>
+      </div>
+
+      <!-- Elemento visual — carimbo/documento -->
+      <div class="lg:col-span-5 reveal" style="transition-delay:150ms">
+        <div class="relative max-w-sm mx-auto aspect-[3/4]">
+          <div class="absolute inset-0 border border-gold/40 rounded translate-x-4 translate-y-4"></div>
+          <div class="absolute inset-0 bg-offwhite rounded shadow-whisper border border-hairline overflow-hidden flex flex-col items-center justify-center p-8">
+            <div class="absolute inset-0 passport-texture opacity-60"></div>
+            <div class="absolute top-6 left-6 right-6 h-px bg-hairline"></div>
+            <div class="absolute bottom-6 left-6 right-6 h-px bg-hairline"></div>
+
+            <!-- Carimbo circular -->
+            <svg viewBox="0 0 200 200" class="w-48 h-48 text-burgundy relative -rotate-6" aria-hidden="true">
+              <defs>
+                <path id="stampTop" d="M 24 100 A 76 76 0 0 1 176 100" />
+                <path id="stampBottom" d="M 24 100 A 76 76 0 0 0 176 100" />
+              </defs>
+              <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+              <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
+              <circle cx="100" cy="100" r="58" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <text font-family="Montserrat, sans-serif" font-size="10.5" letter-spacing="3.5" fill="currentColor" opacity="0.85">
+                <textPath href="#stampTop" startOffset="50%" text-anchor="middle">ASSESSORIA &#8226; VISTO</textPath>
+              </text>
+              <text font-family="Montserrat, sans-serif" font-size="10.5" letter-spacing="3.5" fill="currentColor" opacity="0.85">
+                <textPath href="#stampBottom" startOffset="50%" text-anchor="middle">ESTADOS UNIDOS</textPath>
+              </text>
+              <text x="100" y="93" text-anchor="middle" font-family="Playfair Display, serif" font-style="italic" font-weight="600" font-size="34" fill="currentColor">VISTO</text>
+              <text x="100" y="112" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="8" letter-spacing="4" fill="currentColor" opacity="0.7">AMERICANO</text>
+              <svg x="94" y="118" width="12" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-star4"/></svg>
+            </svg>
+
+            <p class="relative font-serif italic text-burgundy/50 text-center mt-4 text-sm">O primeiro passo da sua jornada</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POR QUE CONTAR COM UMA ASSESSORIA
+     ============================================================ -->
+<section id="confianca" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mb-5 leading-tight">
+        Mais tranquilidade para cuidar de um momento importante.
+      </h2>
+      <p class="font-sans text-navy/70 text-lg leading-relaxed">
+        O processo de solicitação de visto pode gerar dúvidas e inseguranças. A assessoria ajuda você a organizar as informações, entender cada etapa e chegar preparado ao processo.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8" style="transition-delay:0ms">
+        <span class="font-serif text-3xl text-gold/70 block mb-4">01</span>
+        <span class="material-symbols-outlined text-burgundy text-2xl mb-3 block">support_agent</span>
+        <h3 class="font-serif text-xl text-navy mb-2">Orientação personalizada</h3>
+        <p class="font-sans text-sm text-navy/65 leading-relaxed">Cada atendimento é direcionado à realidade e às necessidades do cliente.</p>
+      </div>
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8" style="transition-delay:80ms">
+        <span class="font-serif text-3xl text-gold/70 block mb-4">02</span>
+        <span class="material-symbols-outlined text-burgundy text-2xl mb-3 block">folder_managed</span>
+        <h3 class="font-serif text-xl text-navy mb-2">Organização</h3>
+        <p class="font-sans text-sm text-navy/65 leading-relaxed">Auxílio na preparação das informações e documentos necessários.</p>
+      </div>
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8" style="transition-delay:160ms">
+        <span class="font-serif text-3xl text-gold/70 block mb-4">03</span>
+        <span class="material-symbols-outlined text-burgundy text-2xl mb-3 block">task_alt</span>
+        <h3 class="font-serif text-xl text-navy mb-2">Preparação</h3>
+        <p class="font-sans text-sm text-navy/65 leading-relaxed">Orientações para que o solicitante compreenda melhor as etapas do processo.</p>
+      </div>
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8" style="transition-delay:240ms">
+        <span class="font-serif text-3xl text-gold/70 block mb-4">04</span>
+        <span class="material-symbols-outlined text-burgundy text-2xl mb-3 block">visibility</span>
+        <h3 class="font-serif text-xl text-navy mb-2">Acompanhamento</h3>
+        <p class="font-sans text-sm text-navy/65 leading-relaxed">Suporte durante as etapas contratadas da assessoria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVIÇOS
+     ============================================================ -->
+<section id="servicos" class="py-24 md:py-32 border-t border-hairline">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal mb-16">
+      <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-gold">Serviços</span>
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mt-3 leading-tight">
+        Assessoria para diferentes momentos da sua jornada.
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card grande -->
+      <div class="reveal card-lift md:col-span-2 bg-offwhite border border-hairline rounded p-10 flex flex-col justify-between">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-4xl mb-5 block">flight_takeoff</span>
+          <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4">Visto de Turismo</h3>
+          <p class="font-sans text-navy/65 leading-relaxed max-w-lg">Assessoria para pessoas que desejam viajar aos Estados Unidos a turismo.</p>
+        </div>
+        <a href="#contato" class="mt-8 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <!-- Card padrão -->
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8 flex flex-col justify-between" style="transition-delay:60ms">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-3xl mb-4 block">fiber_new</span>
+          <h3 class="font-serif text-xl text-navy mb-2">Primeira Solicitação</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Orientação para quem nunca solicitou um visto americano.</p>
+        </div>
+        <a href="#contato" class="mt-6 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8 flex flex-col justify-between" style="transition-delay:120ms">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-3xl mb-4 block">update</span>
+          <h3 class="font-serif text-xl text-navy mb-2">Renovação</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Suporte para quem precisa entender o processo de renovação.</p>
+        </div>
+        <a href="#contato" class="mt-6 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8 flex flex-col justify-between" style="transition-delay:180ms">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-3xl mb-4 block">family_restroom</span>
+          <h3 class="font-serif text-xl text-navy mb-2">Família</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Orientação para famílias que desejam organizar suas solicitações.</p>
+        </div>
+        <a href="#contato" class="mt-6 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8 flex flex-col justify-between" style="transition-delay:240ms">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-3xl mb-4 block">record_voice_over</span>
+          <h3 class="font-serif text-xl text-navy mb-2">Preparação para entrevista</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Orientações e preparação para a entrevista consular.</p>
+        </div>
+        <a href="#contato" class="mt-6 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <div class="reveal card-lift bg-offwhite border border-hairline rounded p-8 flex flex-col justify-between" style="transition-delay:300ms">
+        <div>
+          <span class="material-symbols-outlined text-burgundy text-3xl mb-4 block">fact_check</span>
+          <h3 class="font-serif text-xl text-navy mb-2">Análise do perfil</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Avaliação das informações apresentadas pelo cliente para identificar pontos que precisam de atenção durante a preparação.</p>
+        </div>
+        <a href="#contato" class="mt-6 self-start font-sans text-xs tracking-[0.14em] uppercase text-burgundy border-b border-burgundy pb-1 hover:text-burgundy-dark hover:border-burgundy-dark transition-colors">Saiba mais</a>
+      </div>
+
+      <!-- Card CTA -->
+      <div class="reveal card-lift md:col-span-2 bg-burgundy text-offwhite rounded p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6" style="transition-delay:360ms">
+        <div>
+          <h3 class="font-serif text-xl mb-1">Não sabe por onde começar?</h3>
+          <p class="font-sans text-sm text-offwhite/75">Fale com a Camila e descubra qual serviço combina com o seu momento.</p>
+        </div>
+        <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Quero%20entender%20qual%20servi%C3%A7o%20de%20assessoria%20combina%20com%20o%20meu%20caso."
+           target="_blank" rel="noopener"
+           class="btn-cream inline-flex items-center justify-center whitespace-nowrap px-6 py-3 rounded-sm font-sans text-xs tracking-[0.14em] uppercase shrink-0">
+          Falar com a Camila
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMO FUNCIONA
+     ============================================================ -->
+<section id="como-funciona" class="py-24 md:py-32 border-t border-hairline bg-offwhite/60">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal mb-20">
+      <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-gold">Como funciona</span>
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mt-3 mb-5 leading-tight">
+        Uma jornada simples, do primeiro contato ao próximo passo.
+      </h2>
+      <p class="font-sans text-navy/70 leading-relaxed">
+        Um processo claro e organizado, para que você entenda cada etapa antes de segui-la.
+      </p>
+    </div>
+
+    <!-- Desktop: timeline horizontal -->
+    <div class="hidden md:block relative">
+      <div class="absolute top-1.5 left-0 right-0 timeline-line"></div>
+      <div class="grid grid-cols-6 gap-4">
+        <div class="reveal relative">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">01</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Primeiro contato</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">Você entra em contato pelo WhatsApp.</p>
+        </div>
+        <div class="reveal relative" style="transition-delay:60ms">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">02</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Entendimento do perfil</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">A Camila entende seu objetivo e orienta sobre o processo.</p>
+        </div>
+        <div class="reveal relative" style="transition-delay:120ms">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">03</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Organização</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">As informações necessárias são organizadas.</p>
+        </div>
+        <div class="reveal relative" style="transition-delay:180ms">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">04</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Preparação</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">O cliente recebe orientações para seguir cada etapa.</p>
+        </div>
+        <div class="reveal relative" style="transition-delay:240ms">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">05</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Acompanhamento</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">A assessoria acompanha as etapas contratadas.</p>
+        </div>
+        <div class="reveal relative" style="transition-delay:300ms">
+          <div class="relative h-3 mb-6"><div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute left-1 top-1/2 -translate-y-1/2"></div></div>
+          <div class="timeline-number text-4xl mb-4">06</div>
+          <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-2">Próximo passo</h3>
+          <p class="font-sans text-sm text-navy/65 leading-relaxed">O cliente segue preparado para dar continuidade ao processo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: timeline vertical -->
+    <div class="md:hidden relative pl-10">
+      <div class="absolute top-2 bottom-2 left-[15px] timeline-line-vertical"></div>
+
+      <div class="reveal relative pb-10">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">01</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Primeiro contato</h3>
+        <p class="font-sans text-sm text-navy/65">Você entra em contato pelo WhatsApp.</p>
+      </div>
+      <div class="reveal relative pb-10">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">02</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Entendimento do perfil</h3>
+        <p class="font-sans text-sm text-navy/65">A Camila entende seu objetivo e orienta sobre o processo.</p>
+      </div>
+      <div class="reveal relative pb-10">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">03</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Organização</h3>
+        <p class="font-sans text-sm text-navy/65">As informações necessárias são organizadas.</p>
+      </div>
+      <div class="reveal relative pb-10">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">04</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Preparação</h3>
+        <p class="font-sans text-sm text-navy/65">O cliente recebe orientações para seguir cada etapa.</p>
+      </div>
+      <div class="reveal relative pb-10">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">05</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Acompanhamento</h3>
+        <p class="font-sans text-sm text-navy/65">A assessoria acompanha as etapas contratadas.</p>
+      </div>
+      <div class="reveal relative">
+        <div class="w-2.5 h-2.5 rounded-full bg-burgundy absolute -left-[25px] top-2"></div>
+        <div class="font-serif text-3xl text-burgundy/70 mb-1">06</div>
+        <h3 class="font-sans text-xs tracking-[0.1em] uppercase text-burgundy mb-1">Próximo passo</h3>
+        <p class="font-sans text-sm text-navy/65">O cliente segue preparado para dar continuidade ao processo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE CAMILA
+     ============================================================ -->
+<section id="sobre" class="py-24 md:py-32 border-t border-hairline">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center">
+
+      <!-- Foto -->
+      <div class="md:col-span-5 reveal">
+        <div class="relative aspect-[3/4] max-w-md mx-auto">
+          <div class="absolute inset-0 border border-gold/40 rounded -translate-x-3 -translate-y-3"></div>
+          <!-- SUBSTITUIR: foto editorial profissional da Camila Almeida (fundo neutro, iluminação sofisticada) -->
+          <div class="absolute inset-0 rounded overflow-hidden shadow-whisper border border-hairline bg-gradient-to-br from-navy via-navy/95 to-burgundy-dark flex items-center justify-center">
+            <div class="absolute inset-0 passport-texture opacity-20"></div>
+            <span class="font-serif text-8xl text-offwhite/25">CA</span>
+            <div class="absolute inset-4 border border-offwhite/15 rounded pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="md:col-span-7 reveal" style="transition-delay:100ms">
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-gold">Sobre a assessoria</span>
+        <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mt-3 mb-6 leading-tight">
+          Atendimento próximo para uma jornada <span class="italic text-burgundy">mais tranquila</span>.
+        </h2>
+        <div class="space-y-5 font-sans text-navy/70 text-lg leading-relaxed">
+          <p>Acredito que por trás de cada solicitação de visto existe um sonho, um projeto de vida ou uma oportunidade importante. Meu trabalho vai além de preencher formulários: é sobre organizar cada detalhe com cuidado e clareza.</p>
+          <p>Atendo cada cliente de forma próxima e personalizada, entendendo seu momento e orientando em cada etapa, para que o processo deixe de ser intimidador e se torne uma experiência mais segura e tranquila.</p>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-hairline flex items-center gap-4">
+          <svg class="w-6 h-6 text-burgundy" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-star4"/></svg>
+          <div>
+            <div class="font-serif text-2xl text-burgundy leading-none mb-1">Camila Almeida</div>
+            <div class="font-sans text-[11px] tracking-[0.18em] uppercase text-navy/60">Assessora de Visto Americano</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIFERENCIAIS
+     ============================================================ -->
+<section id="diferenciais" class="py-24 md:py-32 bg-burgundy text-offwhite relative overflow-hidden">
+  <div class="absolute inset-0 passport-texture opacity-[0.06]"></div>
+  <div class="max-w-container mx-auto px-5 md:px-8 relative">
+    <div class="max-w-2xl mx-auto text-center reveal mb-16">
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] mb-4 leading-tight">Por que escolher a Camila?</h2>
+      <div class="w-16 h-px bg-gold mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="reveal border-t border-offwhite/20 pt-6">
+        <span class="font-serif text-5xl text-gold/80 block mb-4">01</span>
+        <h3 class="font-serif text-xl mb-2">Atendimento personalizado</h3>
+        <p class="font-sans text-sm text-offwhite/70 leading-relaxed">Suporte próximo, direcionado à realidade de cada cliente.</p>
+      </div>
+      <div class="reveal border-t border-offwhite/20 pt-6" style="transition-delay:80ms">
+        <span class="font-serif text-5xl text-gold/80 block mb-4">02</span>
+        <h3 class="font-serif text-xl mb-2">Orientação clara</h3>
+        <p class="font-sans text-sm text-offwhite/70 leading-relaxed">Informações objetivas em uma linguagem simples e acessível.</p>
+      </div>
+      <div class="reveal border-t border-offwhite/20 pt-6" style="transition-delay:160ms">
+        <span class="font-serif text-5xl text-gold/80 block mb-4">03</span>
+        <h3 class="font-serif text-xl mb-2">Processo organizado</h3>
+        <p class="font-sans text-sm text-offwhite/70 leading-relaxed">Cada etapa estruturada com método e atenção aos detalhes.</p>
+      </div>
+      <div class="reveal border-t border-offwhite/20 pt-6" style="transition-delay:240ms">
+        <span class="font-serif text-5xl text-gold/80 block mb-4">04</span>
+        <h3 class="font-serif text-xl mb-2">Suporte próximo</h3>
+        <p class="font-sans text-sm text-offwhite/70 leading-relaxed">Acompanhamento contínuo durante as etapas contratadas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DEPOIMENTOS
+     ============================================================ -->
+<section id="depoimentos" class="py-24 md:py-32">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal mb-16">
+      <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-gold">Depoimentos</span>
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mt-3 leading-tight">
+        Histórias que chegaram mais perto do sonho americano.
+      </h2>
+    </div>
+
+    <!-- Track: carrossel no mobile / grid no desktop -->
+    <div id="testi-track" class="testi-track flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible -mx-5 px-5 md:mx-0 md:px-0">
+      <article class="testi-slide reveal shrink-0 w-[85%] sm:w-[70%] md:w-auto bg-offwhite border border-hairline rounded p-8 card-lift flex flex-col">
+        <div class="flex gap-1 text-gold mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="font-sans text-navy/75 italic leading-relaxed flex-grow mb-6">"O processo sempre me pareceu complexo. A Camila organizou tudo com clareza e eu me senti seguro em cada etapa até a entrevista."</p>
+        <div class="pt-4 border-t border-hairline">
+          <p class="font-serif text-burgundy text-lg">Mariana S.</p>
+          <p class="font-sans text-xs text-navy/55 uppercase tracking-wide mt-1">Cliente — Assessoria de Visto</p>
+        </div>
+      </article>
+
+      <article class="testi-slide reveal shrink-0 w-[85%] sm:w-[70%] md:w-auto bg-offwhite border border-hairline rounded p-8 card-lift flex flex-col" style="transition-delay:100ms">
+        <div class="flex gap-1 text-gold mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="font-sans text-navy/75 italic leading-relaxed flex-grow mb-6">"Atenção aos detalhes impressionante. A orientação fez toda a diferença na forma como apresentei minha documentação."</p>
+        <div class="pt-4 border-t border-hairline">
+          <p class="font-serif text-burgundy text-lg">Roberto A.</p>
+          <p class="font-sans text-xs text-navy/55 uppercase tracking-wide mt-1">Cliente — Assessoria de Visto</p>
+        </div>
+      </article>
+
+      <article class="testi-slide reveal shrink-0 w-[85%] sm:w-[70%] md:w-auto bg-offwhite border border-hairline rounded p-8 card-lift flex flex-col" style="transition-delay:200ms">
+        <div class="flex gap-1 text-gold mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="font-sans text-navy/75 italic leading-relaxed flex-grow mb-6">"Fizemos o processo para toda a família. A organização prévia nos deixou muito mais tranquilos para a entrevista."</p>
+        <div class="pt-4 border-t border-hairline">
+          <p class="font-serif text-burgundy text-lg">Família Costa</p>
+          <p class="font-sans text-xs text-navy/55 uppercase tracking-wide mt-1">Cliente — Assessoria de Visto</p>
+        </div>
+      </article>
+    </div>
+
+    <div id="testi-dots" class="md:hidden flex justify-center gap-2 mt-6">
+      <button class="testi-dot active" aria-label="Depoimento 1"></button>
+      <button class="testi-dot" aria-label="Depoimento 2"></button>
+      <button class="testi-dot" aria-label="Depoimento 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTATO — "Seu visto começa aqui" + QR Code
+     ============================================================ -->
+<section id="contato" class="py-24 md:py-32 border-t border-hairline relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 passport-texture opacity-30"></div>
+    <div class="absolute top-1/2 right-0 -translate-y-1/2 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="reveal grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-offwhite rounded border border-hairline p-8 md:p-16 shadow-whisper">
+
+      <div class="flex flex-col items-start gap-6">
+        <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy leading-tight max-w-md">
+          Pronto para dar o primeiro passo?
+        </h2>
+        <p class="font-sans text-navy/70 text-lg leading-relaxed max-w-md">
+          Converse com a Camila e descubra como funciona a assessoria para o seu caso.
+        </p>
+        <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Quero%20falar%20sobre%20a%20assessoria%20de%20visto%20americano."
+           target="_blank" rel="noopener"
+           class="btn-primary inline-flex items-center justify-center px-8 py-4 rounded-sm font-sans text-xs tracking-[0.18em] uppercase shadow-whisper">
+          Falar com a Camila no WhatsApp
+        </a>
+        <span class="font-sans text-xs text-navy/55 uppercase tracking-wide">Atendimento personalizado</span>
+      </div>
+
+      <div class="relative flex flex-col items-center justify-center gap-5 bg-cream rounded border border-hairline p-8">
+        <div class="absolute inset-2.5 border border-gold/30 rounded pointer-events-none"></div>
+        <h3 class="font-serif text-xl text-burgundy text-center">Fale diretamente com a Camila</h3>
+        <div class="p-3 bg-white rounded border-2 border-burgundy shadow-sm">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=8&qzone=1&color=641F24&bgcolor=FFFFFF&data=https%3A%2F%2Fwa.me%2F5547999259844"
+            width="180" height="180" loading="lazy" decoding="async"
+            alt="QR Code para iniciar uma conversa no WhatsApp com a Camila Almeida"
+            class="w-[180px] h-[180px] rounded-sm" />
+        </div>
+        <div class="flex items-center gap-2 text-navy/65">
+          <span class="material-symbols-outlined text-burgundy text-xl">smartphone</span>
+          <p class="font-sans text-sm text-center">Aponte a câmera do celular e entre em contato pelo WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq" class="py-24 md:py-32 border-t border-hairline bg-offwhite/60">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal mb-14">
+      <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-gold">Dúvidas</span>
+      <h2 class="font-serif font-medium text-3xl md:text-[2.6rem] text-navy mt-3 leading-tight">Perguntas frequentes</h2>
+    </div>
+
+    <div class="max-w-[820px] mx-auto reveal">
+      <div class="divide-y divide-hairline border-y border-hairline">
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-1">
+            <span class="font-serif text-lg md:text-xl text-navy">O que está incluso na assessoria?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-1" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">Orientação personalizada em todas as etapas: organização de documentos, preenchimento orientado do formulário, alinhamento sobre o seu perfil e preparação para a entrevista consular, conforme o pacote contratado.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-2">
+            <span class="font-serif text-lg md:text-xl text-navy">A assessoria garante a aprovação do visto?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-2" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">Não. A decisão final sobre a concessão do visto é de responsabilidade exclusiva das autoridades consulares americanas. A assessoria atua na orientação, organização e preparação do processo, para que você chegue mais seguro e preparado.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-3">
+            <span class="font-serif text-lg md:text-xl text-navy">Quanto tempo demora o processo?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-3" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">O prazo varia conforme a disponibilidade de agenda do Consulado Americano e o tipo de solicitação. No primeiro contato, a Camila apresenta uma estimativa considerando o seu caso específico.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-4">
+            <span class="font-serif text-lg md:text-xl text-navy">Quais documentos preciso apresentar?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-4" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">A lista de documentos é personalizada conforme o seu perfil e o objetivo da viagem. Após o primeiro contato, você recebe uma orientação clara e organizada sobre tudo o que deve ser reunido.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-5">
+            <span class="font-serif text-lg md:text-xl text-navy">Como funciona a entrevista?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-5" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">A entrevista consular é conduzida exclusivamente por um oficial do Consulado Americano. A assessoria auxilia na preparação, para que você compreenda o que esperar e se sinta mais seguro no dia.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-6">
+            <span class="font-serif text-lg md:text-xl text-navy">Vocês fazem renovação de visto?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-6" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">Sim. A assessoria também orienta processos de renovação, auxiliando na verificação dos critérios e na organização das etapas necessárias.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-7">
+            <span class="font-serif text-lg md:text-xl text-navy">Posso fazer o processo para minha família?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-7" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">Sim. A assessoria orienta famílias que desejam organizar suas solicitações de forma conjunta, alinhando as informações de cada integrante.</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="accordion-trigger w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false" aria-controls="faq-8">
+            <span class="font-serif text-lg md:text-xl text-navy">Como começo minha assessoria?</span>
+            <span class="material-symbols-outlined accordion-caret text-burgundy shrink-0">expand_more</span>
+          </button>
+          <div id="faq-8" class="accordion-panel">
+            <p class="font-sans text-navy/70 leading-relaxed pb-6 pr-8">É simples: basta entrar em contato pelo WhatsApp. A Camila vai entender o seu objetivo e explicar como funciona a assessoria para o seu caso.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="font-sans text-xs text-navy/50 leading-relaxed text-center mt-8 max-w-xl mx-auto">
+        A decisão sobre a concessão do visto é de responsabilidade exclusiva das autoridades consulares. A assessoria oferece orientação e suporte na preparação do processo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL
+     ============================================================ -->
+<section class="py-24 md:py-36 bg-burgundy text-offwhite relative overflow-hidden text-center">
+  <div class="absolute inset-0 passport-texture opacity-[0.05]"></div>
+  <svg class="absolute left-[6%] top-10 w-8 h-8 text-gold/50 hidden md:block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-star4"/></svg>
+  <svg class="absolute right-[8%] bottom-12 w-10 h-10 text-gold/40 hidden md:block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-star4"/></svg>
+
+  <div class="max-w-3xl mx-auto px-5 md:px-8 reveal relative">
+    <span class="text-gold text-2xl mb-6 block">&#10022;</span>
+    <h2 class="font-serif font-medium text-3xl md:text-5xl leading-tight mb-6">
+      Aqui, seu sonho é <span class="italic">VISTO</span> — e realizado.
+    </h2>
+    <div class="w-16 h-px bg-gold mx-auto mb-6"></div>
+    <p class="font-sans text-lg text-offwhite/80 mb-10 max-w-xl mx-auto">
+      Comece sua jornada com orientação, organização e tranquilidade.
+    </p>
+    <a href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Quero%20falar%20sobre%20a%20assessoria%20de%20visto%20americano."
+       target="_blank" rel="noopener"
+       class="btn-cream inline-flex items-center justify-center px-9 py-4 rounded-sm font-sans text-xs tracking-[0.18em] uppercase shadow-whisper">
+      Quero falar com a Camila
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-burgundy-dark text-offwhite pt-20 pb-28 md:pb-20">
+  <div class="max-w-container mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-14 border-b border-offwhite/15">
+
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="font-serif text-3xl text-offwhite">CA</span>
+          <div class="flex flex-col leading-tight border-l border-offwhite/25 pl-3">
+            <span class="font-serif text-base">Camila Almeida</span>
+            <span class="font-sans text-[10px] tracking-[0.18em] uppercase text-offwhite/70">Assessora de Visto Americano</span>
+          </div>
+        </div>
+        <p class="font-sans text-sm text-offwhite/65 leading-relaxed max-w-sm">
+          Assessoria independente e especializada para quem deseja solicitar o visto americano com mais organização, clareza e tranquilidade.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-sans text-xs tracking-[0.18em] uppercase text-gold mb-5">Navegação</h3>
+        <ul class="space-y-3 font-sans text-sm text-offwhite/75">
+          <li><a href="#inicio" class="hover:text-offwhite transition-colors">Início</a></li>
+          <li><a href="#sobre" class="hover:text-offwhite transition-colors">Sobre</a></li>
+          <li><a href="#servicos" class="hover:text-offwhite transition-colors">Serviços</a></li>
+          <li><a href="#como-funciona" class="hover:text-offwhite transition-colors">Como funciona</a></li>
+          <li><a href="#faq" class="hover:text-offwhite transition-colors">Dúvidas</a></li>
+          <li><a href="#contato" class="hover:text-offwhite transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-sans text-xs tracking-[0.18em] uppercase text-gold mb-5">Atendimento</h3>
+        <ul class="space-y-3 font-sans text-sm text-offwhite/75">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <a href="https://wa.me/5547999259844" target="_blank" rel="noopener" class="hover:text-offwhite transition-colors">(47) 99925-9844</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base">photo_camera</span>
+            <!-- TODO: confirmar @ definitivo do Instagram -->
+            <a href="#" class="hover:text-offwhite transition-colors">@camilaalmeida.vistos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-10 flex flex-col items-center text-center gap-4">
+      <p class="font-sans text-xs text-offwhite/55 leading-relaxed max-w-2xl">
+        Assessoria independente. A prestação de serviços de assessoria não garante a aprovação de vistos, cuja decisão compete exclusivamente às autoridades responsáveis.
+      </p>
+      <p class="font-sans text-xs text-offwhite/45">
+        &copy; <span id="current-year">2026</span> Camila Almeida — Assessora de Visto Americano.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CTA fixo mobile — WhatsApp
+     ============================================================ -->
+<a id="mobile-whatsapp-bar" href="https://wa.me/5547999259844?text=Ol%C3%A1%2C%20Camila!%20Gostaria%20de%20saber%20mais%20sobre%20a%20assessoria%20de%20visto%20americano."
+   target="_blank" rel="noopener"
+   class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-burgundy text-offwhite flex items-center justify-center gap-2 py-4 font-sans text-xs tracking-[0.16em] uppercase">
+  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+  Falar no WhatsApp
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

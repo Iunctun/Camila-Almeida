@@ -1,0 +1,275 @@
+/* =========================================================
+   Camila Almeida — Assessoria de Visto Americano
+   Estilos complementares ao Tailwind (utilitário + tokens)
+   ========================================================= */
+
+:root {
+  --burgundy: #8E2F32;
+  --burgundy-dark: #641F24;
+  --cream: #F5EFE6;
+  --offwhite: #FCFAF6;
+  --navy: #182536;
+  --gold: #B79A6B;
+  --hairline: #E6D9CA;
+  --whisper-shadow: 0px 10px 30px rgba(24, 37, 54, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+::selection {
+  background-color: var(--burgundy);
+  color: var(--offwhite);
+}
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+#site-header {
+  transition: background-color 300ms ease, box-shadow 300ms ease, padding 300ms ease, border-color 300ms ease;
+  border-bottom: 1px solid transparent;
+}
+#site-header.scrolled {
+  background-color: rgba(252, 250, 246, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 6px 24px rgba(24, 37, 54, 0.05);
+  border-bottom-color: var(--hairline);
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 250ms ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: var(--burgundy);
+}
+
+/* ---------------------------------------------------------
+   Botões
+   --------------------------------------------------------- */
+.btn-primary {
+  background-color: var(--burgundy);
+  color: var(--offwhite);
+  transition: background-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+.btn-primary:hover {
+  background-color: var(--burgundy-dark);
+  box-shadow: 0px 14px 30px rgba(100, 31, 36, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid var(--burgundy);
+  color: var(--burgundy);
+  transition: background-color 250ms ease, color 250ms ease;
+}
+.btn-outline:hover {
+  background-color: var(--burgundy);
+  color: var(--offwhite);
+}
+
+.btn-cream {
+  background-color: var(--offwhite);
+  color: var(--burgundy-dark);
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+.btn-cream:hover {
+  background-color: var(--cream);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------------
+   Reveal on scroll
+   --------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------------------------------------------------------
+   Cards
+   --------------------------------------------------------- */
+.card-lift {
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--whisper-shadow);
+  border-color: var(--burgundy);
+}
+
+/* ---------------------------------------------------------
+   Hairline divider with gold accent
+   --------------------------------------------------------- */
+.gold-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* 4-point star */
+.star4 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/* ---------------------------------------------------------
+   Bandeira estilizada (textura discreta, baixa saturação)
+   --------------------------------------------------------- */
+.flag-texture {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(142, 47, 50, 0.55) 0px,
+      rgba(142, 47, 50, 0.55) 26px,
+      rgba(245, 239, 230, 0.55) 26px,
+      rgba(245, 239, 230, 0.55) 52px
+    );
+  background-size: 100% 100%;
+  filter: blur(1px);
+}
+.flag-canton {
+  background-color: rgba(24, 37, 54, 0.75);
+  background-image: radial-gradient(rgba(245, 239, 230, 0.65) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+/* Textura de passaporte (linhas finas + moldura) */
+.passport-texture {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(24, 37, 54, 0.035) 0px, rgba(24, 37, 54, 0.035) 1px, transparent 1px, transparent 46px),
+    repeating-linear-gradient(90deg, rgba(24, 37, 54, 0.035) 0px, rgba(24, 37, 54, 0.035) 1px, transparent 1px, transparent 46px);
+}
+
+/* ---------------------------------------------------------
+   Timeline — Como funciona
+   --------------------------------------------------------- */
+.timeline-line {
+  background: linear-gradient(90deg, transparent, var(--burgundy) 8%, var(--burgundy) 92%, transparent);
+  height: 1px;
+}
+.timeline-line-vertical {
+  background: linear-gradient(to bottom, transparent, var(--burgundy) 6%, var(--burgundy) 94%, transparent);
+  width: 1px;
+}
+.timeline-number {
+  font-family: 'Playfair Display', serif;
+  color: var(--burgundy);
+  opacity: 0.28;
+  transition: opacity 600ms ease, transform 600ms ease;
+  transform: translateY(6px);
+}
+.timeline-number.is-visible {
+  opacity: 0.9;
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Accordion — FAQ
+   --------------------------------------------------------- */
+.accordion-panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 350ms ease, opacity 300ms ease;
+}
+.accordion-panel.open {
+  max-height: 480px;
+  opacity: 1;
+}
+.accordion-caret {
+  transition: transform 300ms ease;
+}
+.accordion-trigger[aria-expanded="true"] .accordion-caret {
+  transform: rotate(180deg);
+}
+
+/* ---------------------------------------------------------
+   Depoimentos — carrossel mobile
+   --------------------------------------------------------- */
+.testi-track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.testi-track::-webkit-scrollbar { display: none; }
+.testi-slide {
+  scroll-snap-align: center;
+}
+.testi-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: var(--hairline);
+  transition: background-color 250ms ease, width 250ms ease;
+}
+.testi-dot.active {
+  background-color: var(--burgundy);
+  width: 18px;
+}
+
+/* ---------------------------------------------------------
+   Menu mobile
+   --------------------------------------------------------- */
+#mobile-nav {
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+#mobile-nav.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------------------------------------------------------
+   CTA fixo mobile (WhatsApp)
+   --------------------------------------------------------- */
+#mobile-whatsapp-bar {
+  box-shadow: 0px -6px 24px rgba(24, 37, 54, 0.12);
+}
+
+/* Esconder scrollbar (timeline horizontal) */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---------------------------------------------------------
+   Selo / carimbo decorativo
+   --------------------------------------------------------- */
+.stamp-ring {
+  animation: none;
+}
