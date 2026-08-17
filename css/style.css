@@ -242,6 +242,48 @@ section[id] {
 }
 
 /* ---------------------------------------------------------
+   Formulário de feedback — avaliação por estrelas
+   --------------------------------------------------------- */
+.rating-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.rating-input input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.rating-input label {
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--hairline);
+  transition: color 150ms ease, transform 150ms ease;
+}
+.rating-input label:hover,
+.rating-input label:hover ~ label,
+.rating-input input:checked ~ label {
+  color: var(--gold);
+}
+.rating-input input:focus-visible ~ label {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 2px;
+}
+
+/* Novo depoimento inserido pelo formulário */
+.testi-new {
+  animation: testiPulse 1.8s ease-out;
+}
+@keyframes testiPulse {
+  0% { box-shadow: 0 0 0 3px rgba(183, 154, 107, 0.55); }
+  100% { box-shadow: 0 0 0 0 rgba(183, 154, 107, 0); }
+}
+
+/* ---------------------------------------------------------
    Menu mobile
    --------------------------------------------------------- */
 #mobile-nav {
